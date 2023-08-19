@@ -7,3 +7,8 @@ Working script of MikroTik Cloud Hosted Router version installation on [PQ VPS](
 Directly on the script itself I recommend to study [Mounting Loopback Device (loop) using offset sizelimit](https://wiki.dieg.info/mount#montirovanie_loopback_device_loop_s_ispolzovanie_offset_sizelimit).
 
 [Как установить MikroTik RouterOS (CHR) на VPS VDS](https://wiki.dieg.info/mikrotik_cloud_hosted_router)
+
+```bash
+wget https://raw.githubusercontent.com/darkfire13/RouterOS-CHR-Install/main/chr_install
+bash chr_install
+```
