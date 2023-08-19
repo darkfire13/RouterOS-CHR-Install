@@ -10,5 +10,7 @@ Directly on the script itself I recommend to study [Mounting Loopback Device (lo
 
 ```bash
 wget https://raw.githubusercontent.com/darkfire13/RouterOS-CHR-Install/main/chr_install
+```
+```bash
 bash chr_install
 ```
