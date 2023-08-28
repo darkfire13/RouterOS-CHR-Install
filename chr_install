@@ -26,9 +26,7 @@ dd if=chr.img bs=1024 of=/dev/vda
 echo "sync disk"
 # synchronize all mounted filesystems
 echo s > /proc/sysrq-trigger
-echo "Sleep 10 seconds"
-#/usr/bin/sleep 10
-read -t 10 -u 1
-echo "Ok, reboot"
-# perform an immediate OS reboot similar to the RESET button (without synchronising and unmounting file systems)
+echo "Sleep 5 seconds"
+sleep 5
+echo "rebooting"
 echo b > /proc/sysrq-trigger
