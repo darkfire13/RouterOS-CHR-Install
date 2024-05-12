@@ -6,12 +6,13 @@ ADDRESS=`ip addr show enp0s3 | grep global | cut -d' ' -f 6 | head -n 1`
 GATEWAY=`ip route list | grep default | cut -d' ' -f 3`
 # Raw disk image https://mikrotik.com/download#chr
 #VERSIONCHR=7.10.2
-VERSIONCHR=7.11
+VERSIONCHR=7.14.3
  
+apt update
+apt install -y pwgen coreutils unzip
 wget -4 https://download.mikrotik.com/routeros/$VERSIONCHR/chr-$VERSIONCHR.img.zip -O chr.img.zip
 gunzip -c chr.img.zip > chr.img
 mount -o loop,offset=33571840 chr.img /mnt
-apt install -y pwgen coreutils
 PASSWORD=$(pwgen 12 1)
 echo "Username: admin"
 echo "Password: $PASSWORD"
